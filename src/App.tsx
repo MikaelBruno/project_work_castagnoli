@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import VerticaBarChart from './components/VerticalBarChart';
+import Navbar from './components/Navbar';
+import Nazionale from './pages/Nazionale';
+
+
+const National: React.FC = () => <><Nazionale /></>;
+const Regional: React.FC = () => <div></div>;
+const Comparazione: React.FC = () => <div></div>;
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+    <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<National />} />
+                <Route path="/regionale" element={<Regional />} />
+                <Route path="/confronto" element={<Comparazione />} />
+            </Routes>
+    </Router>
+  </>
   );
 }
 

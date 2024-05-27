@@ -1,0 +1,43 @@
+$background-color: #1F2126;
+$font-color: #CADCE0;
+$selected-color: #37C0C5;
+$font-hover-color: #ddd;
+
+.card-chart {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 24px;
+    padding-bottom: 24px;
+    background-color: $background-color;
+    border-radius: 0px 50px 10px 50px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    color: $font-color;
+    font-size: 20px;
+
+    .card-chart-title {
+        color: $selected-color;
+        font-size: 24px;
+        padding-bottom: 8px;
+    }
+
+    .card-chart-subtext {
+        width: 75%;    
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .card-chart-chart {
+        display: flex;
+        margin-left: 5%;
+        width: 90%;
+        justify-content: space-evenly;
+        > * {
+            width: 45%; 
+            height: 300px;
+        }
+    }
+}

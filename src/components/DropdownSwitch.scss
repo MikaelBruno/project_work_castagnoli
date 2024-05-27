@@ -1,0 +1,42 @@
+$background-color: #1F2126;
+$font-color: #CADCE0;
+$selected-color: #37C0C5;
+$font-hover-color: #ddd;
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    margin: 24px 10%;
+    background-color: $background-color;
+    border-radius: 0px 50px 10px 50px;
+    .dropbtn {
+        color: $selected-color;
+        font-size: 24px;
+        padding: 16px;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-content {
+        display: block;
+        position: relative;
+        background-color: $background-color;
+        min-width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        border-radius: 0px 0px 10px 10px;
+        .dropdown-item {
+            color: $font-color;
+            padding: 12px 16px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            &:hover {
+                background-color: $selected-color;
+                color: $font-hover-color;
+            }
+        }
+    }
+}
